@@ -11,7 +11,7 @@ requires-python = ">=3.9"
 license = "MIT"
 license-files = ["LICENSE"]
 authors = [
-  { name = "Himel Das", email = "hello2himel@proton.me" },
+  { name = "Himel Das", email = "stargzr.science@gmail.com" },
 ]
 keywords = [
   "bangla-qr",

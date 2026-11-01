@@ -47,7 +47,7 @@ request containing a real QR payload, screenshot, account number, or NPSB token.
 
 ## Reporting a vulnerability
 
-Email **hello2himel@proton.me** with:
+Email **stargzr.science@gmail.com** with:
 
 - a description and impact,
 - reproduction steps or a minimal proof of concept,
