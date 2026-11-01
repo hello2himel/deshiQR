@@ -1,0 +1,83 @@
+name: Publish browser bundle (GitHub Pages)
+
+# The static "API": GitHub Pages serves the browser bundle and an interactive demo.
+#   https://<owner>.github.io/deshiQR/deshiqr.global.js   → window.DeshiQR.update/validate
+#   https://<owner>.github.io/deshiQR/                    → demo page (payload + edits in, new payload out)
+#
+# GitHub Pages is static-only: it cannot run server-side functions. The edit logic runs in the
+# visitor's browser (this bundle) or in the consumer's own Node/Python process (npm/PyPI packages).
+# There is no HTTP endpoint to deploy.
+#
+# Why GitHub Pages: raw.githubusercontent.com serves text/plain with X-Content-Type-Options:
+# nosniff, so browsers refuse to execute it from <script src>. Pages serves the same file with the
+# correct JavaScript content type. npm/jsDelivr/unpkg remain the primary package path.
+#
+# Setup: repository Settings → Pages → Build and deployment → Source: GitHub Actions.
+# Runs on every push to main (and manually); no package publish needed.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: build and verify the bundle
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Build the package
+        run: pnpm build
+
+      - name: Verify the browser bundle
+        run: node scripts/check-globals.mjs
+
+      # Assemble into a dedicated output directory: the Pages artifact only holds
+      # the browser bundle and its demo page.
+      - name: Assemble the Pages site
+        run: |
+          mkdir -p pages-out
+          cp cdn/index.html pages-out/index.html
+          cp packages/deshiqr/dist/deshiqr.global.js packages/deshiqr/dist/deshiqr.global.js.map pages-out/
+          printf '%s\n' \
+            'deshiQR browser bundle' \
+            '' \
+            'deshiqr.global.js   window.DeshiQR   (update + validate)' \
+            '' \
+            'npm: https://www.npmjs.com/package/deshiqr' \
+            'Docs: https://github.com/hello2himel/deshiQR' \
+            > pages-out/README.txt
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: pages-out
+
+  deploy:
+    name: deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

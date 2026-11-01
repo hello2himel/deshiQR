@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deshiqr"
+version = "0.1.0"
+description = "Load a Bangla QR payload, edit any tag, validate it, and get the updated payload back. Zero dependencies."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+  { name = "Himel Das", email = "hello2himel@proton.me" },
+]
+keywords = [
+  "bangla-qr",
+  "bangladesh",
+  "bkash",
+  "emv",
+  "emvco",
+  "npsb",
+  "payload-editor",
+  "payments",
+  "qr",
+  "qr-code",
+  "validator",
+  "zero-dependency",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Office/Business :: Financial",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Typing :: Typed",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/hello2himel/deshiQR"
+Repository = "https://github.com/hello2himel/deshiQR"
+Issues = "https://github.com/hello2himel/deshiQR/issues"
+Documentation = "https://github.com/hello2himel/deshiQR/blob/main/docs/api.md"
+Changelog = "https://github.com/hello2himel/deshiQR/blob/main/CHANGELOG.md"
+Demo = "https://hello2himel.github.io/deshiQR/"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+deshiqr = ["py.typed"]

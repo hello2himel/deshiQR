@@ -1,0 +1,30 @@
+{
+  "name": "deshiqr",
+  "private": true,
+  "version": "0.1.0",
+  "description": "deshiQR \u2014 load a Bangla QR payload, edit any tag, validate, and get the updated payload back. Zero-dependency libraries for JS/TS and Python, plus a browser bundle.",
+  "packageManager": "pnpm@12.15.0",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "build": "pnpm build:libs",
+    "build:libs": "pnpm --filter deshiqr build",
+    "test": "pnpm build:libs && pnpm -r --if-present test",
+    "check:globals": "node scripts/check-globals.mjs",
+    "typecheck": "pnpm -r --if-present typecheck",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hello2himel/deshiQR.git"
+  },
+  "homepage": "https://github.com/hello2himel/deshiQR#readme",
+  "bugs": {
+    "url": "https://github.com/hello2himel/deshiQR/issues"
+  },
+  "license": "MIT"
+}

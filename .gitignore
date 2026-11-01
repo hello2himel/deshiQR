@@ -1,0 +1,25 @@
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+*.log
+.DS_Store
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+
+# Website (site/ — static site in this monorepo, built by Netlify; see docs/website.md)
+site/node_modules/
+site/.netlify/
+site/tests/e2e/shots/
+
+# Python (python/ package)
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+.python-version

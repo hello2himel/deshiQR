@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>deshiQR browser example — update a payload</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --ink: #1b1030;
+        --paper: #ffffff;
+        --card: #faf8fd;
+        --muted: #6b6478;
+        --border: #d9d4e2;
+        --accent: #e2136e;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --ink: #f2eef8;
+          --paper: #14101c;
+          --card: #1d1827;
+          --muted: #aaa3b8;
+          --border: #3a3348;
+        }
+      }
+      body {
+        margin: 0 auto;
+        max-width: 60rem;
+        padding: 2rem 1.25rem 4rem;
+        font:
+          16px/1.6 "Figtree",
+          system-ui,
+          sans-serif;
+        color: var(--ink);
+        background: var(--paper);
+      }
+      h1 {
+        font-size: 1.5rem;
+        margin: 0 0 0.25rem;
+      }
+      h2 {
+        font-size: 1.05rem;
+        margin: 1.5rem 0 0.5rem;
+      }
+      p {
+        color: var(--muted);
+      }
+      code,
+      pre,
+      textarea,
+      input {
+        font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+        font-size: 0.85rem;
+      }
+      pre,
+      textarea {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0.85rem;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        background: var(--card);
+        color: var(--ink);
+        overflow-x: auto;
+        white-space: pre-wrap;
+        word-break: break-all;
+      }
+      textarea {
+        min-height: 7rem;
+        resize: vertical;
+      }
+      label {
+        display: block;
+        margin: 1rem 0 0.35rem;
+        font-weight: 600;
+      }
+      input {
+        width: 10rem;
+        padding: 0.5rem 0.65rem;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: var(--paper);
+        color: var(--ink);
+      }
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        align-items: flex-end;
+      }
+      button {
+        padding: 0.55rem 1rem;
+        font: inherit;
+        font-weight: 600;
+        color: #fff;
+        background: var(--accent);
+        border: 0;
+        border-radius: 999px;
+        cursor: pointer;
+      }
+      .banner {
+        border-left: 4px solid #d97706;
+        background: rgba(217, 119, 6, 0.12);
+        padding: 0.7rem 1rem;
+        border-radius: 8px;
+        margin: 1rem 0;
+      }
+      .bad {
+        color: #c02636;
+        font-weight: 600;
+      }
+      #warnings {
+        margin: 0.5rem 0 0;
+        padding-left: 1.2rem;
+      }
+      #warnings li {
+        margin: 0.3rem 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Update a Bangla QR payload in the browser</h1>
+    <p>
+      One script tag, no bundler, no build step for this page (it loads the locally built bundle). It applies
+      edits to the payload and shows the updated payload string and any warnings. It does
+      <strong>not</strong> render a QR code — encode or render the returned payload however you like.
+    </p>
+
+    <div class="banner">
+      <strong>Synthetic payload only.</strong> The account <code>01000000000</code> is deliberately
+      unassignable and the NPSB tokens are dummy values. Never put a real merchant payload in a committed file
+      — see <code>docs/demo-payloads.md</code>.
+    </div>
+
+    <label for="payload">Payload</label>
+    <textarea id="payload" spellcheck="false"></textarea>
+
+    <div class="row">
+      <div>
+        <label for="amount">Amount (BDT)</label>
+        <input id="amount" type="number" min="0.01" max="99999999.99" step="0.01" value="500" />
+      </div>
+      <div>
+        <label for="currency">Currency (optional)</label>
+        <input id="currency" type="text" value="050" />
+      </div>
+      <button id="update" type="button">Update payload</button>
+    </div>
+
+    <p id="status" role="status">Loading…</p>
+
+    <h2>Updated payload</h2>
+    <pre id="output">—</pre>
+
+    <h2>Warnings</h2>
+    <ul id="warnings">
+      <li>No warnings.</li>
+    </ul>
+
+    <p>
+      The same edits in code:
+      <code>DeshiQR.update(payload, { amount: 500, currency: "050" })</code>. Any alias or tag path from
+      <code>docs/format.md</code> works, e.g. <code>{ "62/01": "BILL123" }</code> or
+      <code>{ amount: null }</code>.
+    </p>
+
+    <!-- Built by `pnpm build` (packages/deshiqr/dist/deshiqr.global.js, global `DeshiQR`). -->
+    <script src="../packages/deshiqr/dist/deshiqr.global.js"></script>
+    <script>
+      // Synthetic fixture from docs/demo-payloads.md — NOT a real merchant.
+      const DEMO_STATIC_PAYLOAD =
+        "00020101021126470014bd.org.bb.npsb010202020420020311010000000005204601653030505802BD5910DEMO STORE6005Dhaka62060602FT80660014bd.org.bb.npsb0144ZGVzaGlxciBkdW1teSB0b2tlbiBBIG5vdCByZWFsISE=81660014bd.org.bb.npsb0144ZGVzaGlxciBkdW1teSB0b2tlbiBCIG5vdCByZWFsISE=6304295D";
+
+      const payloadInput = document.querySelector("#payload");
+      const amountInput = document.querySelector("#amount");
+      const currencyInput = document.querySelector("#currency");
+      const output = document.querySelector("#output");
+      const warningsList = document.querySelector("#warnings");
+      const status = document.querySelector("#status");
+
+      payloadInput.value = DEMO_STATIC_PAYLOAD;
+
+      function setStatus(message, isError = false) {
+        status.textContent = message;
+        status.className = isError ? "bad" : "";
+      }
+
+      function renderWarnings(warnings) {
+        warningsList.innerHTML = "";
+        if (warnings.length === 0) {
+          const item = document.createElement("li");
+          item.textContent = "No warnings.";
+          warningsList.append(item);
+          return;
+        }
+        for (const issue of warnings) {
+          const item = document.createElement("li");
+          item.textContent = issue.tag
+            ? `${issue.code} (${issue.tag}): ${issue.message}`
+            : `${issue.code}: ${issue.message}`;
+          warningsList.append(item);
+        }
+      }
+
+      function updatePayload() {
+        output.textContent = "—";
+        renderWarnings([]);
+
+        if (!window.DeshiQR || typeof window.DeshiQR.update !== "function") {
+          setStatus(
+            "The bundle did not load. Run `pnpm build` from the repo root, then reopen this file.",
+            true,
+          );
+          return;
+        }
+
+        const edits = {};
+        const amount = amountInput.value.trim();
+        if (amount !== "") edits.amount = amount;
+        const currency = currencyInput.value.trim();
+        if (currency !== "") edits.currency = currency;
+
+        const warnings = [];
+        try {
+          const updated = window.DeshiQR.update(payloadInput.value.trim(), edits, {
+            onWarning: (issue) => warnings.push(issue),
+          });
+          output.textContent = updated;
+          renderWarnings(warnings);
+          setStatus(`Updated payload (${updated.length} characters, ${warnings.length} warning(s)).`);
+        } catch (error) {
+          setStatus(`${error.code || "ERROR"}: ${error.message}`, true);
+        }
+      }
+
+      document.querySelector("#update").addEventListener("click", updatePayload);
+      window.addEventListener("load", updatePayload);
+    </script>
+  </body>
+</html>

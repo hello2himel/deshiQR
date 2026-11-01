@@ -1,0 +1,60 @@
+{
+  "name": "deshiqr",
+  "version": "0.1.0",
+  "description": "Edit and validate Bangladesh Bangla QR (NPSB / EMVCo) payloads: update(payload, edits) and validate(payload). Zero dependencies.",
+  "keywords": [
+    "bangla-qr",
+    "bangladesh",
+    "bkash",
+    "emv",
+    "emvco",
+    "npsb",
+    "payload-editor",
+    "payments",
+    "qr",
+    "qr-payload",
+    "typescript",
+    "validator",
+    "zero-dependency"
+  ],
+  "license": "MIT",
+  "author": "Himel Das <hello2himel@proton.me>",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "unpkg": "./dist/deshiqr.global.js",
+  "jsdelivr": "./dist/deshiqr.global.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "node --test test/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsup": "^9.0.0",
+    "typescript": "^5.9.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hello2himel/deshiQR.git",
+    "directory": "packages/deshiqr"
+  },
+  "homepage": "https://github.com/hello2himel/deshiQR#readme",
+  "bugs": {
+    "url": "https://github.com/hello2himel/deshiQR/issues"
+  }
+}
