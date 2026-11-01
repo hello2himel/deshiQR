@@ -1,5 +1,5 @@
 {
-  "name": "deshiqr",
+  "name": "deshiqr-monorepo",
   "private": true,
   "version": "0.1.0",
   "description": "deshiQR \u2014 load a Bangla QR payload, edit any tag, validate, and get the updated payload back. Zero-dependency libraries for JS/TS and Python, plus a browser bundle.",
