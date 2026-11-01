@@ -1,6 +1,12 @@
 # deshiQR
 
-**The engine: load a Bangla QR payload, edit any tag, and get the updated payload back.**
+**The Bangla-QR engine behind [DeshiPay](https://deshipay.netlify.app).** deshiQR loads a Bangla QR
+payload, lets you edit any tag, and returns the updated payload with a re-sealed checksum.
+
+DeshiPay is a complete way for a shop, freelancer, creator or cause to receive **payments, donations
+and support**: one payment page where the live, amount-ready Bangla QR is the headline method and
+wallet/bank details sit beside it. This repo is the QR engine that powers that QR flow — use it when
+you are building your own Bangla-QR editing, validation or QR flow.
 
 A Bangla QR (the NPSB/EMVCo-style format printed by bKash, bank apps and other Bangla QR apps) is a
 TLV payload with a CRC. deshiQR parses it, applies your edits, keeps the point-of-initiation flag
@@ -11,8 +17,8 @@ deshiQR does not generate QR codes, read merchant semantics, or handle payments.
 zero-dependency libraries for JavaScript/TypeScript and Python, and as a browser bundle on GitHub
 Pages. There is no server and no database; it never holds funds, stores data, or confirms payments.
 
-The public payment-page website built on top of this engine is a separate project:
-**[DeshiPay](https://github.com/hello2himel/deshiPay)** — <https://deshipay.netlify.app>.
+If you want the finished payment-page product instead of the engine, use DeshiPay:
+**[hello2himel/deshiPay](https://github.com/hello2himel/deshiPay)** — <https://deshipay.netlify.app>.
 
 [![CI](https://github.com/hello2himel/deshiQR/actions/workflows/ci.yml/badge.svg)](https://github.com/hello2himel/deshiQR/actions/workflows/ci.yml)
 [![npm: deshiqr](https://img.shields.io/npm/v/deshiqr?label=deshiqr)](https://www.npmjs.com/package/deshiqr)
