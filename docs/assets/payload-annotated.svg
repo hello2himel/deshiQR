@@ -1,0 +1,308 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="1034" viewBox="0 0 980 1034" role="img" aria-labelledby="fig-title fig-desc">
+<title id="fig-title">Payload anatomy: one synthetic Bangla QR payload, annotated tag by tag</title>
+<desc id="fig-desc">A 265-character synthetic DEMO STORE NPSB payload wrapped at tag boundaries. Each 4-character TTLL header is underlined and labelled with its tag id, tag name, syntax and the fixture value.</desc>
+<rect width="980" height="1034" fill="#FCFDFE"/>
+<rect x="13.5" y="13.5" width="953" height="1007" rx="18" fill="none" stroke="#E7ECF3" stroke-width="1"/>
+<text x="46" y="58" font-family="Noto Sans, sans-serif" font-size="11" font-weight="700" fill="#2563EB" letter-spacing="2.2">PAYLOAD ANATOMY</text>
+<text x="46" y="96" font-family="Noto Sans, sans-serif" font-size="26" font-weight="700" fill="#0F172A">One dummy payload, tag by tag</text>
+<text x="46" y="122" font-family="Noto Sans, sans-serif" font-size="13.5" font-weight="400" fill="#64748B">Synthetic</text>
+<text x="108.51" y="122" font-family="Noto Sans Mono, monospace" font-size="13.5" font-weight="500" fill="#111C2E">DEMO STORE</text>
+<text x="193.71" y="122" font-family="Noto Sans, sans-serif" font-size="13.5" font-weight="400" fill="#64748B">fixture · 265 characters · wrapped at tag boundaries · every value fake</text>
+<rect x="274.36" y="143.6" width="8" height="8" rx="2.4" fill="#2563EB"/>
+<text x="290.36" y="152" font-family="Noto Sans, sans-serif" font-size="12.5" font-weight="400" fill="#5A6A7E">Payload header</text>
+<rect x="403.74" y="143.6" width="8" height="8" rx="2.4" fill="#B45309"/>
+<text x="419.74" y="152" font-family="Noto Sans, sans-serif" font-size="12.5" font-weight="400" fill="#5A6A7E">Account template</text>
+<rect x="545.24" y="143.6" width="8" height="8" rx="2.4" fill="#0F766E"/>
+<text x="561.24" y="152" font-family="Noto Sans, sans-serif" font-size="12.5" font-weight="400" fill="#5A6A7E">Merchant</text>
+<rect x="639.76" y="143.6" width="8" height="8" rx="2.4" fill="#7C3AED"/>
+<text x="655.76" y="152" font-family="Noto Sans, sans-serif" font-size="12.5" font-weight="400" fill="#5A6A7E">Additional data &amp; tokens</text>
+<rect x="822.25" y="143.6" width="8" height="8" rx="2.4" fill="#BE123C"/>
+<text x="838.25" y="152" font-family="Noto Sans, sans-serif" font-size="12.5" font-weight="400" fill="#5A6A7E">Checksum</text>
+<line x1="46" y1="172" x2="934" y2="172" stroke="#E7ECF3" stroke-width="1"/>
+<g id="chunk-1" data-payload-start="0">
+<text xml:space="preserve" x="46" y="208" font-family="Noto Sans Mono, monospace" font-size="15.5" font-weight="500" fill="#2563EB">0002</text>
+<text xml:space="preserve" x="83.2" y="208" font-family="Noto Sans Mono, monospace" font-size="15.5" font-weight="400" fill="#16202F">01</text>
+<text xml:space="preserve" x="101.8" y="208" font-family="Noto Sans Mono, monospace" font-size="15.5" font-weight="500" fill="#2563EB">0102</text>
+<text xml:space="preserve" x="139" y="208" font-family="Noto Sans Mono, monospace" font-size="15.5" font-weight="400" fill="#16202F">11</text>
+<line x1="105.8" y1="214.5" x2="135" y2="214.5" stroke="#2563EB" stroke-width="2.6" stroke-linecap="round"/>
+<path d="M 120.4 214.5 L 120.4 228.4 Q 120.4 232.9 124.9 232.9 L 128.4 232.9" fill="none" stroke="#2563EB" stroke-width="1.35" stroke-linecap="round" stroke-opacity="0.68"/>
+<circle cx="120.4" cy="214.5" r="2.35" fill="#2563EB"/>
+<line x1="50" y1="214.5" x2="79.2" y2="214.5" stroke="#2563EB" stroke-width="2.6" stroke-linecap="round"/>
+<path d="M 64.6 214.5 L 64.6 249.9 Q 64.6 254.4 69.1 254.4 L 72.6 254.4" fill="none" stroke="#2563EB" stroke-width="1.35" stroke-linecap="round" stroke-opacity="0.68"/>
+<circle cx="64.6" cy="214.5" r="2.35" fill="#2563EB"/>
+<text x="134.4" y="237.5" font-family="Noto Sans Mono, monospace" font-size="13.5" font-weight="700" fill="#2563EB">01</text>
+<circle cx="157.1" cy="233" r="1.35" fill="#C3CEDB"/>
+<text x="163.6" y="237.5" font-family="Noto Sans, sans-serif" font-size="14" font-weight="500" fill="#111C2E">point of initiation</text>
+<circle cx="286.05" cy="233" r="1.35" fill="#C3CEDB"/>
+<text x="292.55" y="237.5" font-family="Noto Sans, sans-serif" font-size="13" font-weight="400" fill="#5A6A7E">2 digits: "11" static, "12" dynamic</text>
+<circle cx="499.13" cy="233" r="1.35" fill="#C3CEDB"/>
+<text x="505.63" y="237.5" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#93A2B5">"</text>
+<text x="513.43" y="237.5" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#16202F">11</text>
+<text x="529.03" y="237.5" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#93A2B5">"</text>
+<text x="78.6" y="259" font-family="Noto Sans Mono, monospace" font-size="13.5" font-weight="700" fill="#2563EB">00</text>
+<circle cx="101.3" cy="254.5" r="1.35" fill="#C3CEDB"/>
+<text x="107.8" y="259" font-family="Noto Sans, sans-serif" font-size="14" font-weight="500" fill="#111C2E">payload format</text>
+<circle cx="217.14" cy="254.5" r="1.35" fill="#C3CEDB"/>
+<text x="223.64" y="259" font-family="Noto Sans, sans-serif" font-size="13" font-weight="400" fill="#5A6A7E">exactly 2 digits, always "01"</text>
+<circle cx="397.12" cy="254.5" r="1.35" fill="#C3CEDB"/>
+<text x="403.62" y="259" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#93A2B5">"</text>
+<text x="411.42" y="259" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#16202F">01</text>
+<text x="427.02" y="259" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#93A2B5">"</text>
+</g>
+<g id="chunk-2" data-payload-start="12">
+<text xml:space="preserve" x="46" y="297" font-family="Noto Sans Mono, monospace" font-size="15.5" font-weight="500" fill="#B45309">26470014</text>
+<text xml:space="preserve" x="120.4" y="297" font-family="Noto Sans Mono, monospace" font-size="15.5" font-weight="400" fill="#16202F">bd.org.bb.npsb</text>
+<text xml:space="preserve" x="250.6" y="297" font-family="Noto Sans Mono, monospace" font-size="15.5" font-weight="500" fill="#B45309">0102</text>
+<text xml:space="preserve" x="287.8" y="297" font-family="Noto Sans Mono, monospace" font-size="15.5" font-weight="400" fill="#16202F">02</text>
+<text xml:space="preserve" x="306.4" y="297" font-family="Noto Sans Mono, monospace" font-size="15.5" font-weight="500" fill="#B45309">0204</text>
+<text xml:space="preserve" x="343.6" y="297" font-family="Noto Sans Mono, monospace" font-size="15.5" font-weight="400" fill="#16202F">2002</text>
+<text xml:space="preserve" x="380.8" y="297" font-family="Noto Sans Mono, monospace" font-size="15.5" font-weight="500" fill="#B45309">0311</text>
+<text xml:space="preserve" x="418" y="297" font-family="Noto Sans Mono, monospace" font-size="15.5" font-weight="400" fill="#16202F">01000000000</text>
+<line x1="384.8" y1="303.5" x2="414" y2="303.5" stroke="#B45309" stroke-width="2.0" stroke-linecap="round"/>
+<path d="M 399.4 303.5 L 399.4 317.4 Q 399.4 321.9 403.9 321.9 L 407.4 321.9" fill="none" stroke="#B45309" stroke-width="1.35" stroke-linecap="round" stroke-opacity="0.68"/>
+<circle cx="399.4" cy="303.5" r="2.35" fill="#B45309"/>
+<line x1="310.4" y1="303.5" x2="339.6" y2="303.5" stroke="#B45309" stroke-width="2.0" stroke-linecap="round"/>
+<path d="M 325 303.5 L 325 338.9 Q 325 343.4 329.5 343.4 L 333 343.4" fill="none" stroke="#B45309" stroke-width="1.35" stroke-linecap="round" stroke-opacity="0.68"/>
+<circle cx="325" cy="303.5" r="2.35" fill="#B45309"/>
+<line x1="254.6" y1="303.5" x2="283.8" y2="303.5" stroke="#B45309" stroke-width="2.0" stroke-linecap="round"/>
+<path d="M 269.2 303.5 L 269.2 360.4 Q 269.2 364.9 273.7 364.9 L 277.2 364.9" fill="none" stroke="#B45309" stroke-width="1.35" stroke-linecap="round" stroke-opacity="0.68"/>
+<circle cx="269.2" cy="303.5" r="2.35" fill="#B45309"/>
+<line x1="87.2" y1="303.5" x2="116.4" y2="303.5" stroke="#B45309" stroke-width="2.0" stroke-linecap="round"/>
+<path d="M 101.8 303.5 L 101.8 381.9 Q 101.8 386.4 106.3 386.4 L 109.8 386.4" fill="none" stroke="#B45309" stroke-width="1.35" stroke-linecap="round" stroke-opacity="0.68"/>
+<circle cx="101.8" cy="303.5" r="2.35" fill="#B45309"/>
+<line x1="50" y1="303.5" x2="79.2" y2="303.5" stroke="#B45309" stroke-width="2.6" stroke-linecap="round"/>
+<path d="M 64.6 303.5 L 64.6 403.4 Q 64.6 407.9 69.1 407.9 L 72.6 407.9" fill="none" stroke="#B45309" stroke-width="1.35" stroke-linecap="round" stroke-opacity="0.68"/>
+<circle cx="64.6" cy="303.5" r="2.35" fill="#B45309"/>
+<text x="413.4" y="326.5" font-family="Noto Sans Mono, monospace" font-size="13.5" font-weight="700" fill="#B45309">26/03</text>
+<circle cx="460.4" cy="322" r="1.35" fill="#C3CEDB"/>
+<text x="466.9" y="326.5" font-family="Noto Sans, sans-serif" font-size="14" font-weight="500" fill="#111C2E">account identifier</text>
+<circle cx="591.42" cy="322" r="1.35" fill="#C3CEDB"/>
+<text x="597.92" y="326.5" font-family="Noto Sans, sans-serif" font-size="13" font-weight="400" fill="#5A6A7E">alphanumeric, 4–34</text>
+<circle cx="724.58" cy="322" r="1.35" fill="#C3CEDB"/>
+<text x="731.08" y="326.5" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#93A2B5">"</text>
+<text x="738.88" y="326.5" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#16202F">01000000000</text>
+<text x="824.68" y="326.5" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#93A2B5">"</text>
+<text x="339" y="348" font-family="Noto Sans Mono, monospace" font-size="13.5" font-weight="700" fill="#B45309">26/02</text>
+<circle cx="386" cy="343.5" r="1.35" fill="#C3CEDB"/>
+<text x="392.5" y="348" font-family="Noto Sans, sans-serif" font-size="14" font-weight="500" fill="#111C2E">scheme / variant</text>
+<circle cx="510.69" cy="343.5" r="1.35" fill="#C3CEDB"/>
+<text x="517.19" y="348" font-family="Noto Sans, sans-serif" font-size="13" font-weight="400" fill="#5A6A7E">4 digits</text>
+<circle cx="568.13" cy="343.5" r="1.35" fill="#C3CEDB"/>
+<text x="574.63" y="348" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#93A2B5">"</text>
+<text x="582.43" y="348" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#16202F">2002</text>
+<text x="613.63" y="348" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#93A2B5">"</text>
+<text x="283.2" y="369.5" font-family="Noto Sans Mono, monospace" font-size="13.5" font-weight="700" fill="#B45309">26/01</text>
+<circle cx="330.2" cy="365" r="1.35" fill="#C3CEDB"/>
+<text x="336.7" y="369.5" font-family="Noto Sans, sans-serif" font-size="14" font-weight="500" fill="#111C2E">template version</text>
+<circle cx="456.61" cy="365" r="1.35" fill="#C3CEDB"/>
+<text x="463.11" y="369.5" font-family="Noto Sans, sans-serif" font-size="13" font-weight="400" fill="#5A6A7E">2 digits</text>
+<circle cx="514.05" cy="365" r="1.35" fill="#C3CEDB"/>
+<text x="520.55" y="369.5" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#93A2B5">"</text>
+<text x="528.35" y="369.5" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#16202F">02</text>
+<text x="543.95" y="369.5" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#93A2B5">"</text>
+<text x="115.8" y="391" font-family="Noto Sans Mono, monospace" font-size="13.5" font-weight="700" fill="#B45309">26/00</text>
+<circle cx="162.8" cy="386.5" r="1.35" fill="#C3CEDB"/>
+<text x="169.3" y="391" font-family="Noto Sans, sans-serif" font-size="14" font-weight="500" fill="#111C2E">institution AID</text>
+<circle cx="272.92" cy="386.5" r="1.35" fill="#C3CEDB"/>
+<text x="279.42" y="391" font-family="Noto Sans, sans-serif" font-size="13" font-weight="400" fill="#5A6A7E">ASCII, ≤ 32</text>
+<circle cx="343.51" cy="386.5" r="1.35" fill="#C3CEDB"/>
+<text x="350.01" y="391" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#93A2B5">"</text>
+<text x="357.81" y="391" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#16202F">bd.org.bb.npsb</text>
+<text x="467.01" y="391" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#93A2B5">"</text>
+<text x="78.6" y="412.5" font-family="Noto Sans Mono, monospace" font-size="13.5" font-weight="700" fill="#B45309">26</text>
+<circle cx="101.3" cy="408" r="1.35" fill="#C3CEDB"/>
+<text x="107.8" y="412.5" font-family="Noto Sans, sans-serif" font-size="14" font-weight="500" fill="#111C2E">account template</text>
+<circle cx="231.69" cy="408" r="1.35" fill="#C3CEDB"/>
+<text x="238.19" y="412.5" font-family="Noto Sans, sans-serif" font-size="13" font-weight="400" fill="#5A6A7E">TLV subtree (47 characters)</text>
+</g>
+<g id="chunk-3" data-payload-start="63">
+<text xml:space="preserve" x="46" y="450.5" font-family="Noto Sans Mono, monospace" font-size="15.5" font-weight="500" fill="#0F766E">5204</text>
+<text xml:space="preserve" x="83.2" y="450.5" font-family="Noto Sans Mono, monospace" font-size="15.5" font-weight="400" fill="#16202F">6016</text>
+<text xml:space="preserve" x="120.4" y="450.5" font-family="Noto Sans Mono, monospace" font-size="15.5" font-weight="500" fill="#0F766E">5303</text>
+<text xml:space="preserve" x="157.6" y="450.5" font-family="Noto Sans Mono, monospace" font-size="15.5" font-weight="400" fill="#16202F">050</text>
+<text xml:space="preserve" x="185.5" y="450.5" font-family="Noto Sans Mono, monospace" font-size="15.5" font-weight="500" fill="#0F766E">5802</text>
+<text xml:space="preserve" x="222.7" y="450.5" font-family="Noto Sans Mono, monospace" font-size="15.5" font-weight="400" fill="#16202F">BD</text>
+<line x1="189.5" y1="457" x2="218.7" y2="457" stroke="#0F766E" stroke-width="2.6" stroke-linecap="round"/>
+<path d="M 204.1 457 L 204.1 470.9 Q 204.1 475.4 208.6 475.4 L 212.1 475.4" fill="none" stroke="#0F766E" stroke-width="1.35" stroke-linecap="round" stroke-opacity="0.68"/>
+<circle cx="204.1" cy="457" r="2.35" fill="#0F766E"/>
+<line x1="124.4" y1="457" x2="153.6" y2="457" stroke="#0F766E" stroke-width="2.6" stroke-linecap="round"/>
+<path d="M 139 457 L 139 492.4 Q 139 496.9 143.5 496.9 L 147 496.9" fill="none" stroke="#0F766E" stroke-width="1.35" stroke-linecap="round" stroke-opacity="0.68"/>
+<circle cx="139" cy="457" r="2.35" fill="#0F766E"/>
+<line x1="50" y1="457" x2="79.2" y2="457" stroke="#0F766E" stroke-width="2.6" stroke-linecap="round"/>
+<path d="M 64.6 457 L 64.6 513.9 Q 64.6 518.4 69.1 518.4 L 72.6 518.4" fill="none" stroke="#0F766E" stroke-width="1.35" stroke-linecap="round" stroke-opacity="0.68"/>
+<circle cx="64.6" cy="457" r="2.35" fill="#0F766E"/>
+<text x="218.1" y="480" font-family="Noto Sans Mono, monospace" font-size="13.5" font-weight="700" fill="#0F766E">58</text>
+<circle cx="240.8" cy="475.5" r="1.35" fill="#C3CEDB"/>
+<text x="247.3" y="480" font-family="Noto Sans, sans-serif" font-size="14" font-weight="500" fill="#111C2E">country</text>
+<circle cx="305.46" cy="475.5" r="1.35" fill="#C3CEDB"/>
+<text x="311.96" y="480" font-family="Noto Sans, sans-serif" font-size="13" font-weight="400" fill="#5A6A7E">ISO 3166-1 alpha-2</text>
+<circle cx="433.87" cy="475.5" r="1.35" fill="#C3CEDB"/>
+<text x="440.37" y="480" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#93A2B5">"</text>
+<text x="448.17" y="480" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#16202F">BD</text>
+<text x="463.77" y="480" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#93A2B5">"</text>
+<text x="153" y="501.5" font-family="Noto Sans Mono, monospace" font-size="13.5" font-weight="700" fill="#0F766E">53</text>
+<circle cx="175.7" cy="497" r="1.35" fill="#C3CEDB"/>
+<text x="182.2" y="501.5" font-family="Noto Sans, sans-serif" font-size="14" font-weight="500" fill="#111C2E">currency</text>
+<circle cx="247.28" cy="497" r="1.35" fill="#C3CEDB"/>
+<text x="253.78" y="501.5" font-family="Noto Sans, sans-serif" font-size="13" font-weight="400" fill="#5A6A7E">ISO 4217 numeric, here BDT</text>
+<circle cx="432.47" cy="497" r="1.35" fill="#C3CEDB"/>
+<text x="438.97" y="501.5" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#93A2B5">"</text>
+<text x="446.77" y="501.5" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#16202F">050</text>
+<text x="470.17" y="501.5" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#93A2B5">"</text>
+<text x="78.6" y="523" font-family="Noto Sans Mono, monospace" font-size="13.5" font-weight="700" fill="#0F766E">52</text>
+<circle cx="101.3" cy="518.5" r="1.35" fill="#C3CEDB"/>
+<text x="107.8" y="523" font-family="Noto Sans, sans-serif" font-size="14" font-weight="500" fill="#111C2E">merchant category code</text>
+<circle cx="277.57" cy="518.5" r="1.35" fill="#C3CEDB"/>
+<text x="284.07" y="523" font-family="Noto Sans, sans-serif" font-size="13" font-weight="400" fill="#5A6A7E">4 digits</text>
+<circle cx="335" cy="518.5" r="1.35" fill="#C3CEDB"/>
+<text x="341.5" y="523" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#93A2B5">"</text>
+<text x="349.3" y="523" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#16202F">6016</text>
+<text x="380.5" y="523" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#93A2B5">"</text>
+</g>
+<g id="chunk-4" data-payload-start="84">
+<text xml:space="preserve" x="46" y="561" font-family="Noto Sans Mono, monospace" font-size="15.5" font-weight="500" fill="#0F766E">5910</text>
+<text xml:space="preserve" x="83.2" y="561" font-family="Noto Sans Mono, monospace" font-size="15.5" font-weight="400" fill="#16202F">DEMO STORE</text>
+<text xml:space="preserve" x="176.2" y="561" font-family="Noto Sans Mono, monospace" font-size="15.5" font-weight="500" fill="#0F766E">6005</text>
+<text xml:space="preserve" x="213.4" y="561" font-family="Noto Sans Mono, monospace" font-size="15.5" font-weight="400" fill="#16202F">Dhaka</text>
+<text xml:space="preserve" x="259.9" y="561" font-family="Noto Sans Mono, monospace" font-size="15.5" font-weight="500" fill="#7C3AED">62060602</text>
+<text xml:space="preserve" x="334.3" y="561" font-family="Noto Sans Mono, monospace" font-size="15.5" font-weight="400" fill="#16202F">FT</text>
+<line x1="301.1" y1="567.5" x2="330.3" y2="567.5" stroke="#7C3AED" stroke-width="2.0" stroke-linecap="round"/>
+<path d="M 315.7 567.5 L 315.7 581.4 Q 315.7 585.9 320.2 585.9 L 323.7 585.9" fill="none" stroke="#7C3AED" stroke-width="1.35" stroke-linecap="round" stroke-opacity="0.68"/>
+<circle cx="315.7" cy="567.5" r="2.35" fill="#7C3AED"/>
+<line x1="263.9" y1="567.5" x2="293.1" y2="567.5" stroke="#7C3AED" stroke-width="2.6" stroke-linecap="round"/>
+<path d="M 278.5 567.5 L 278.5 602.9 Q 278.5 607.4 283 607.4 L 286.5 607.4" fill="none" stroke="#7C3AED" stroke-width="1.35" stroke-linecap="round" stroke-opacity="0.68"/>
+<circle cx="278.5" cy="567.5" r="2.35" fill="#7C3AED"/>
+<line x1="180.2" y1="567.5" x2="209.4" y2="567.5" stroke="#0F766E" stroke-width="2.6" stroke-linecap="round"/>
+<path d="M 194.8 567.5 L 194.8 624.4 Q 194.8 628.9 199.3 628.9 L 202.8 628.9" fill="none" stroke="#0F766E" stroke-width="1.35" stroke-linecap="round" stroke-opacity="0.68"/>
+<circle cx="194.8" cy="567.5" r="2.35" fill="#0F766E"/>
+<line x1="50" y1="567.5" x2="79.2" y2="567.5" stroke="#0F766E" stroke-width="2.6" stroke-linecap="round"/>
+<path d="M 64.6 567.5 L 64.6 645.9 Q 64.6 650.4 69.1 650.4 L 72.6 650.4" fill="none" stroke="#0F766E" stroke-width="1.35" stroke-linecap="round" stroke-opacity="0.68"/>
+<circle cx="64.6" cy="567.5" r="2.35" fill="#0F766E"/>
+<text x="329.7" y="590.5" font-family="Noto Sans Mono, monospace" font-size="13.5" font-weight="700" fill="#7C3AED">62/06</text>
+<circle cx="376.7" cy="586" r="1.35" fill="#C3CEDB"/>
+<text x="383.2" y="590.5" font-family="Noto Sans, sans-serif" font-size="14" font-weight="500" fill="#111C2E">customer label</text>
+<circle cx="489.21" cy="586" r="1.35" fill="#C3CEDB"/>
+<text x="495.71" y="590.5" font-family="Noto Sans, sans-serif" font-size="13" font-weight="400" fill="#5A6A7E">text</text>
+<circle cx="525.81" cy="586" r="1.35" fill="#C3CEDB"/>
+<text x="532.31" y="590.5" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#93A2B5">"</text>
+<text x="540.11" y="590.5" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#16202F">FT</text>
+<text x="555.71" y="590.5" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#93A2B5">"</text>
+<text x="292.5" y="612" font-family="Noto Sans Mono, monospace" font-size="13.5" font-weight="700" fill="#7C3AED">62</text>
+<circle cx="315.2" cy="607.5" r="1.35" fill="#C3CEDB"/>
+<text x="321.7" y="612" font-family="Noto Sans, sans-serif" font-size="14" font-weight="500" fill="#111C2E">additional data</text>
+<circle cx="429.31" cy="607.5" r="1.35" fill="#C3CEDB"/>
+<text x="435.81" y="612" font-family="Noto Sans, sans-serif" font-size="13" font-weight="400" fill="#5A6A7E">TLV subtree (6 characters), optional</text>
+<text x="208.8" y="633.5" font-family="Noto Sans Mono, monospace" font-size="13.5" font-weight="700" fill="#0F766E">60</text>
+<circle cx="231.5" cy="629" r="1.35" fill="#C3CEDB"/>
+<text x="238" y="633.5" font-family="Noto Sans, sans-serif" font-size="14" font-weight="500" fill="#111C2E">merchant city</text>
+<circle cx="336.56" cy="629" r="1.35" fill="#C3CEDB"/>
+<text x="343.06" y="633.5" font-family="Noto Sans, sans-serif" font-size="13" font-weight="400" fill="#5A6A7E">text, 1–15</text>
+<circle cx="408.83" cy="629" r="1.35" fill="#C3CEDB"/>
+<text x="415.33" y="633.5" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#93A2B5">"</text>
+<text x="423.13" y="633.5" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#16202F">Dhaka</text>
+<text x="462.13" y="633.5" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#93A2B5">"</text>
+<text x="78.6" y="655" font-family="Noto Sans Mono, monospace" font-size="13.5" font-weight="700" fill="#0F766E">59</text>
+<circle cx="101.3" cy="650.5" r="1.35" fill="#C3CEDB"/>
+<text x="107.8" y="655" font-family="Noto Sans, sans-serif" font-size="14" font-weight="500" fill="#111C2E">merchant name</text>
+<circle cx="221.04" cy="650.5" r="1.35" fill="#C3CEDB"/>
+<text x="227.54" y="655" font-family="Noto Sans, sans-serif" font-size="13" font-weight="400" fill="#5A6A7E">text, 1–25</text>
+<circle cx="293.3" cy="650.5" r="1.35" fill="#C3CEDB"/>
+<text x="299.8" y="655" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#93A2B5">"</text>
+<text x="307.6" y="655" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#16202F">DEMO STORE</text>
+<text x="385.6" y="655" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#93A2B5">"</text>
+</g>
+<g id="chunk-5" data-payload-start="117">
+<text xml:space="preserve" x="46" y="693" font-family="Noto Sans Mono, monospace" font-size="15.5" font-weight="500" fill="#7C3AED">80660014</text>
+<text xml:space="preserve" x="120.4" y="693" font-family="Noto Sans Mono, monospace" font-size="15.5" font-weight="400" fill="#16202F">bd.org.bb.npsb</text>
+<text xml:space="preserve" x="250.6" y="693" font-family="Noto Sans Mono, monospace" font-size="15.5" font-weight="500" fill="#7C3AED">0144</text>
+<text xml:space="preserve" x="287.8" y="693" font-family="Noto Sans Mono, monospace" font-size="15.5" font-weight="400" fill="#16202F">ZGVzaGlxciBkdW1teSB0b2tlbiBBIG5vdCByZWFsISE=</text>
+<line x1="254.6" y1="699.5" x2="283.8" y2="699.5" stroke="#7C3AED" stroke-width="2.0" stroke-linecap="round"/>
+<path d="M 269.2 699.5 L 269.2 713.4 Q 269.2 717.9 273.7 717.9 L 277.2 717.9" fill="none" stroke="#7C3AED" stroke-width="1.35" stroke-linecap="round" stroke-opacity="0.68"/>
+<circle cx="269.2" cy="699.5" r="2.35" fill="#7C3AED"/>
+<line x1="87.2" y1="699.5" x2="116.4" y2="699.5" stroke="#7C3AED" stroke-width="2.0" stroke-linecap="round"/>
+<path d="M 101.8 699.5 L 101.8 734.9 Q 101.8 739.4 106.3 739.4 L 109.8 739.4" fill="none" stroke="#7C3AED" stroke-width="1.35" stroke-linecap="round" stroke-opacity="0.68"/>
+<circle cx="101.8" cy="699.5" r="2.35" fill="#7C3AED"/>
+<line x1="50" y1="699.5" x2="79.2" y2="699.5" stroke="#7C3AED" stroke-width="2.6" stroke-linecap="round"/>
+<path d="M 64.6 699.5 L 64.6 756.4 Q 64.6 760.9 69.1 760.9 L 72.6 760.9" fill="none" stroke="#7C3AED" stroke-width="1.35" stroke-linecap="round" stroke-opacity="0.68"/>
+<circle cx="64.6" cy="699.5" r="2.35" fill="#7C3AED"/>
+<text x="283.2" y="722.5" font-family="Noto Sans Mono, monospace" font-size="13.5" font-weight="700" fill="#7C3AED">80/01</text>
+<circle cx="330.2" cy="718" r="1.35" fill="#C3CEDB"/>
+<text x="336.7" y="722.5" font-family="Noto Sans, sans-serif" font-size="14" font-weight="500" fill="#111C2E">token</text>
+<circle cx="381.76" cy="718" r="1.35" fill="#C3CEDB"/>
+<text x="388.26" y="722.5" font-family="Noto Sans, sans-serif" font-size="13" font-weight="400" fill="#5A6A7E">base64, opaque</text>
+<circle cx="491.85" cy="718" r="1.35" fill="#C3CEDB"/>
+<text x="498.35" y="722.5" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#93A2B5">"</text>
+<text x="506.15" y="722.5" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#16202F">ZGVzaGlxciBkdW1teSB0b2tlbiBBIG5vdCByZWFsISE=</text>
+<text x="849.35" y="722.5" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#93A2B5">"</text>
+<text x="115.8" y="744" font-family="Noto Sans Mono, monospace" font-size="13.5" font-weight="700" fill="#7C3AED">80/00</text>
+<circle cx="162.8" cy="739.5" r="1.35" fill="#C3CEDB"/>
+<text x="169.3" y="744" font-family="Noto Sans, sans-serif" font-size="14" font-weight="500" fill="#111C2E">institution AID</text>
+<circle cx="272.92" cy="739.5" r="1.35" fill="#C3CEDB"/>
+<text x="279.42" y="744" font-family="Noto Sans, sans-serif" font-size="13" font-weight="400" fill="#5A6A7E">ASCII</text>
+<circle cx="318.39" cy="739.5" r="1.35" fill="#C3CEDB"/>
+<text x="324.89" y="744" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#93A2B5">"</text>
+<text x="332.69" y="744" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#16202F">bd.org.bb.npsb</text>
+<text x="441.89" y="744" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#93A2B5">"</text>
+<text x="78.6" y="765.5" font-family="Noto Sans Mono, monospace" font-size="13.5" font-weight="700" fill="#7C3AED">80</text>
+<circle cx="101.3" cy="761" r="1.35" fill="#C3CEDB"/>
+<text x="107.8" y="765.5" font-family="Noto Sans, sans-serif" font-size="14" font-weight="500" fill="#111C2E">token template A</text>
+<circle cx="229.83" cy="761" r="1.35" fill="#C3CEDB"/>
+<text x="236.33" y="765.5" font-family="Noto Sans, sans-serif" font-size="13" font-weight="400" fill="#5A6A7E">TLV subtree (66 characters), opaque</text>
+</g>
+<g id="chunk-6" data-payload-start="187">
+<text xml:space="preserve" x="46" y="803.5" font-family="Noto Sans Mono, monospace" font-size="15.5" font-weight="500" fill="#7C3AED">81660014</text>
+<text xml:space="preserve" x="120.4" y="803.5" font-family="Noto Sans Mono, monospace" font-size="15.5" font-weight="400" fill="#16202F">bd.org.bb.npsb</text>
+<text xml:space="preserve" x="250.6" y="803.5" font-family="Noto Sans Mono, monospace" font-size="15.5" font-weight="500" fill="#7C3AED">0144</text>
+<text xml:space="preserve" x="287.8" y="803.5" font-family="Noto Sans Mono, monospace" font-size="15.5" font-weight="400" fill="#16202F">ZGVzaGlxciBkdW1teSB0b2tlbiBCIG5vdCByZWFsISE=</text>
+<line x1="254.6" y1="810" x2="283.8" y2="810" stroke="#7C3AED" stroke-width="2.0" stroke-linecap="round"/>
+<path d="M 269.2 810 L 269.2 823.9 Q 269.2 828.4 273.7 828.4 L 277.2 828.4" fill="none" stroke="#7C3AED" stroke-width="1.35" stroke-linecap="round" stroke-opacity="0.68"/>
+<circle cx="269.2" cy="810" r="2.35" fill="#7C3AED"/>
+<line x1="87.2" y1="810" x2="116.4" y2="810" stroke="#7C3AED" stroke-width="2.0" stroke-linecap="round"/>
+<path d="M 101.8 810 L 101.8 845.4 Q 101.8 849.9 106.3 849.9 L 109.8 849.9" fill="none" stroke="#7C3AED" stroke-width="1.35" stroke-linecap="round" stroke-opacity="0.68"/>
+<circle cx="101.8" cy="810" r="2.35" fill="#7C3AED"/>
+<line x1="50" y1="810" x2="79.2" y2="810" stroke="#7C3AED" stroke-width="2.6" stroke-linecap="round"/>
+<path d="M 64.6 810 L 64.6 866.9 Q 64.6 871.4 69.1 871.4 L 72.6 871.4" fill="none" stroke="#7C3AED" stroke-width="1.35" stroke-linecap="round" stroke-opacity="0.68"/>
+<circle cx="64.6" cy="810" r="2.35" fill="#7C3AED"/>
+<text x="283.2" y="833" font-family="Noto Sans Mono, monospace" font-size="13.5" font-weight="700" fill="#7C3AED">81/01</text>
+<circle cx="330.2" cy="828.5" r="1.35" fill="#C3CEDB"/>
+<text x="336.7" y="833" font-family="Noto Sans, sans-serif" font-size="14" font-weight="500" fill="#111C2E">token</text>
+<circle cx="381.76" cy="828.5" r="1.35" fill="#C3CEDB"/>
+<text x="388.26" y="833" font-family="Noto Sans, sans-serif" font-size="13" font-weight="400" fill="#5A6A7E">base64, opaque</text>
+<circle cx="491.85" cy="828.5" r="1.35" fill="#C3CEDB"/>
+<text x="498.35" y="833" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#93A2B5">"</text>
+<text x="506.15" y="833" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#16202F">ZGVzaGlxciBkdW1teSB0b2tlbiBCIG5vdCByZWFsISE=</text>
+<text x="849.35" y="833" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#93A2B5">"</text>
+<text x="115.8" y="854.5" font-family="Noto Sans Mono, monospace" font-size="13.5" font-weight="700" fill="#7C3AED">81/00</text>
+<circle cx="162.8" cy="850" r="1.35" fill="#C3CEDB"/>
+<text x="169.3" y="854.5" font-family="Noto Sans, sans-serif" font-size="14" font-weight="500" fill="#111C2E">institution AID</text>
+<circle cx="272.92" cy="850" r="1.35" fill="#C3CEDB"/>
+<text x="279.42" y="854.5" font-family="Noto Sans, sans-serif" font-size="13" font-weight="400" fill="#5A6A7E">ASCII</text>
+<circle cx="318.39" cy="850" r="1.35" fill="#C3CEDB"/>
+<text x="324.89" y="854.5" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#93A2B5">"</text>
+<text x="332.69" y="854.5" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#16202F">bd.org.bb.npsb</text>
+<text x="441.89" y="854.5" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#93A2B5">"</text>
+<text x="78.6" y="876" font-family="Noto Sans Mono, monospace" font-size="13.5" font-weight="700" fill="#7C3AED">81</text>
+<circle cx="101.3" cy="871.5" r="1.35" fill="#C3CEDB"/>
+<text x="107.8" y="876" font-family="Noto Sans, sans-serif" font-size="14" font-weight="500" fill="#111C2E">token template B</text>
+<circle cx="229.81" cy="871.5" r="1.35" fill="#C3CEDB"/>
+<text x="236.31" y="876" font-family="Noto Sans, sans-serif" font-size="13" font-weight="400" fill="#5A6A7E">TLV subtree (66 characters), opaque</text>
+</g>
+<g id="chunk-7" data-payload-start="257">
+<text xml:space="preserve" x="46" y="914" font-family="Noto Sans Mono, monospace" font-size="15.5" font-weight="500" fill="#BE123C">6304</text>
+<text xml:space="preserve" x="83.2" y="914" font-family="Noto Sans Mono, monospace" font-size="15.5" font-weight="400" fill="#16202F">295D</text>
+<line x1="50" y1="920.5" x2="79.2" y2="920.5" stroke="#BE123C" stroke-width="2.6" stroke-linecap="round"/>
+<path d="M 64.6 920.5 L 64.6 934.4 Q 64.6 938.9 69.1 938.9 L 72.6 938.9" fill="none" stroke="#BE123C" stroke-width="1.35" stroke-linecap="round" stroke-opacity="0.68"/>
+<circle cx="64.6" cy="920.5" r="2.35" fill="#BE123C"/>
+<text x="78.6" y="943.5" font-family="Noto Sans Mono, monospace" font-size="13.5" font-weight="700" fill="#BE123C">63</text>
+<circle cx="101.3" cy="939" r="1.35" fill="#C3CEDB"/>
+<text x="107.8" y="943.5" font-family="Noto Sans, sans-serif" font-size="14" font-weight="500" fill="#111C2E">CRC-16/CCITT-FALSE</text>
+<circle cx="249.33" cy="939" r="1.35" fill="#C3CEDB"/>
+<text x="255.83" y="943.5" font-family="Noto Sans, sans-serif" font-size="13" font-weight="400" fill="#5A6A7E">4 uppercase hex, computed over all the rest</text>
+<circle cx="530.13" cy="939" r="1.35" fill="#C3CEDB"/>
+<text x="536.63" y="943.5" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#93A2B5">"</text>
+<text x="544.43" y="943.5" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#16202F">295D</text>
+<text x="575.63" y="943.5" font-family="Noto Sans Mono, monospace" font-size="13" font-weight="400" fill="#93A2B5">"</text>
+</g>
+<line x1="46" y1="975.5" x2="934" y2="975.5" stroke="#E7ECF3" stroke-width="1"/>
+<text x="46" y="1001.5" font-family="Noto Sans, sans-serif" font-size="12.5" font-weight="400" fill="#64748B">Underline = each field's 4-character TTLL header (2-digit tag + 2-digit length); labels quote the fixture's actual bytes.</text>
+</svg>
